@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    body {
+        font-family: sans-serif;
+        background-color: aqua;
+
+    }
+
+    .img-cont {
+        width: 100%;
+        height: 95vh;
+        display: grid;
+        grid-template-rows: 33% auto;
+    }
+
+    .cont1 {
+        background-image: url(img/2024-tesla-model-3-european-model-3-64f21a71e3c45.png);
+        background: cover;
+    }
+
+    .cont2 {
+        background-image: url(img/model\ y.avif);
+        background-size: cover;
+
+        background-repeat: no-repeat;
+
+
+    }
+
+    .cont3 {
+        background-image: url(img/-Model-X-.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .cont4 {
+        background-image: url(img/model\ s.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .cont5 {
+        background-image: url(img/13_Desktop_Order.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .cont6 {
+        background-image: url(img/SolarPanels.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .cont7 {
+        background-image: url(img/solarroof.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .cont8 {
+        background-image: url(img/Powerwall-01.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .cont9 {
+        background-image: url(img/Homepage-Accessories-Desktop-NA-APAC.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-batween;
+        align-items: center;
+        height: 4rem;
+        background: black;
+        padding: 0px 70px 0px 70px;
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 100px;
+
+    }
+
+    .menu-item {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+
+
+    }
+
+
+
+
+
+    .logo {
+        width: 16rem;
+        margin-right: 20px;
+        height: 4rem;
+
+    }
+
+    .icons {
+        margin-left: 300px;
+        display: flex;
+
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        color: aliceblue;
+        margin-left: 20px;
+    }
+
+
+
+    .btn1 {
+        position: flex;
+        text-align: center;
+        color: red;
+        background-color: none;
+        padding: 10px 60px 10px 60px;
+        border-radius: 20px;
+        box-sizing: border-box;
+
+        margin-left: 100px;
+        background-color: white;
+
+
+
+
+
+    }
+
+    .btn2 {
+        position: flex;
+        text-align: center;
+        color: red;
+        background-color: none;
+        padding: 10px 60px 10px 60px;
+        border-radius: 20px;
+        box-sizing: border-box;
+
+        background-color: black;
+
+
+
+    }
+
+    .buttons {
+        margin-top: 200px;
+        margin-left: 350px;
+    }
+
+    .bos1 {
+        margin-top: 300px;
+        margin-left: 190px;
+
+    }
+
+    .bos2 {
+        margin-top: 300px;
+        margin-right: 200px;
+
+
+    }
+
+    .boss {
+        margin-top: 400px;
+        margin-left: 190px;
+
+    }
+
+    .atages:hover {
+        background-color: rgb(206, 122, 122);
+        color: black;
+
+
+
+    }
+
+    .desc {
+        justify-content: center;
+        align-items: center;
+        margin-left: 500px;
+        margin-top: 170px;
+    }
+
+    h1 {
+        margin-left: 60px
+    }
+
+    h3 {
+        margin-left: 30px
+    }
+
+    .text {
+        margin-right: 200px;
+
+    }
+
+    .allem {
+        margin-left: 200px;
+    }
+
+
+
+
+
+
+
+    img {
+        width: 30%;
+        margin-right: 5px;
+        display: flex;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    #products-menu-items {
+        position: relative;
+    }
+
+    .v_menu {
+        width: 50%;
+        height: 60%;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .e_menu {
+        width: 50%;
+        height: 60%;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .c_menu {
+        width: 50%;
+        height: 70%;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .d_menu {
+        width: 50%;
+        height: 60%;
+        
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        display: none;
+    }
+
+    .s_menu {
+        width: 40%;
+        height: 60%;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .v_menu {
+        flex-direction: row;
+    }
+
+    .sub-menu {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sub-btn {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+        border: none;
+
+
+
+    }
+
+
+
+    button {
+        border: none;
+        outline: none;
+
+        background-color: none;
+        background: none;
+        text-decoration: underline;
+    }
+
+    .btn {
+        margin-left: 10px;
+    }
+
+    .btns {
+        margin-right: 50px;
+    }
+
+    .sub-para {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+        border: none;
+
+    }
+
+    .sub-paras {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+        border: none;
+
+    }
+
+    .pa {
+        margin-right: 50px;
+
+    }
+
+    p {
+        margin-left: 10px;
+    }
+
+    .sec2-sub-menu {
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <header>
+        <!--navigation bar-->
+        <div class="navbar">
+            <div class="logo">
+                <img class="logo" src="img/logo-removebg-preview.png">
+            </div>
+            <nav>
+                <div class="menu-item atages">
+                    <a href="#" id="vehicle">Vehicles</a>
+                </div>
+
+                <div class="v_menu">
+                    <div class="sub-menu">
+                        <img class="img" src="img/Model-X.avif">
+
+
+                        <img class="img" src="img/model y.avif">
+
+
+                        <img class="img" src="img/model s.avif">
+
+
+                    </div>
+                    <div class="sub-btn">
+                        <div class="btn"><button>Learn</button>
+                            <button>order</button>
+                        </div>
+                        <div><button>Learn</button>
+                            <button>order</button>
+                        </div>
+                        <div class="btns"><button>Learn</button>
+                            <button>order</button>
+                        </div>
+                    </div>
+                    <div class="sub-para">
+                        <div>
+                            <p><b>Model-X</b></p>
+                        </div>
+                        <div>
+                            <p><b>Model-y</b></p>
+                        </div>
+                        <div>
+                            <p class="pa"><b>Model-S</b></p>
+                        </div>
+
+                    </div>
+                    <div class="sec2-sub-menu">
+                        <div class="sub-menu">
+                            <img class="img" src="img/Model-X.avif">
+
+
+                            <img class="img" src="img/model y.avif">
+
+
+                            <img class="img" src="img/model s.avif">
+
+
+                        </div>
+
+                        <div class="sub-btn">
+                            <div class="btn"><button>Learn</button>
+                                <button>order</button>
+                            </div>
+                            <div><button>Learn</button>
+                                <button>order</button>
+                            </div>
+                            <div class="btns"><button>Learn</button>
+                                <button>order</button>
+                            </div>
+                        </div>
+                        <div class="sub-para">
+                            <div>
+                                <p><b>Model-X</b></p>
+                            </div>
+                            <div>
+                                <p><b>Model-y</b></p>
+                            </div>
+                            <div>
+                                <p class="pa"><b>Model-S</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-item atages">
+                    <a href="#" id="energy">Energy</a>
+                </div>
+                <div class="e_menu">
+                    <div class="sub-menu">
+                        <img class="img" src="img/solar.menu.avif">
+
+
+                        <img class="img" src="img/Solar-Roof. menu.avif">
+
+
+                        <img class="img" src="img/powerwall.menu.avif">
+
+
+                    </div>
+                    <div class="sub-btn">
+                        <div class="btn"><button>Learn</button>
+                            <button>order</button>
+                        </div>
+                        <div><button>Learn</button>
+                            <button>order</button>
+                        </div>
+                        <div class="btns"><button>Learn</button>
+                            <button>order</button>
+                        </div>
+                    </div>
+                    <div class="sub-para">
+                        <div>
+                            <p><b>Solar-Panels</b></p>
+                        </div>
+                        <div>
+                            <p><b>Solar-Roof</b></p>
+                        </div>
+                        <div>
+                            <p class="pa"><b>Powe-Wall</b></p>
+                        </div>
+
+                    </div>
+                    <div class="sec2-sub-menu">
+                        <div class="sub-menu">
+                            <img class="img" src="img/megapack.menu.avif">
+
+
+
+
+
+                        </div>
+
+                        <div class="sub-btn">
+                            <div class="btn"><button>Learn</button>
+                                <button>order</button>
+                            </div>
+
+
+                        </div>
+                        <div class="sub-para">
+                            <div>
+                                <p><b>Megapack</b></p>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu-item atages">
+                    <a href="#" id="Charging">Charging</a>
+                    <div class="c_menu">
+                        <div class="sub-menu">
+                            <img class="img" src="img/charging.menu.avif">
+
+
+                            <img class="img" src="img/Home-Charging.avif">
+
+
+                            <img class="img" src="img/-Supercharging-NA.avif">
+
+
+                        </div>
+                        <div class="sub-btn">
+                            <div class="btn"><button>Learn</button>
+                                <button>order</button>
+                            </div>
+                            <div><button>Learn</button>
+                                <button>order</button>
+                            </div>
+                            <div class="btns"><button>Learn</button>
+                                <button>order</button>
+                            </div>
+                        </div>
+                        <div class="sub-para">
+                            <div>
+                                <p><b>Model-X</b></p>
+                            </div>
+                            <div>
+                                <p><b>Model-y</b></p>
+                            </div>
+                            <div>
+                                <p class="pa"><b>Model-S</b></p>
+                            </div>
+
+                        </div>
+                        <div class="sec2-sub-menu">
+
+
+
+                            <div class="sub-paras">
+                                <div>
+                                    <p>Help Me Charge</p>
+                                </div>
+                                <br>
+                                <div>
+                                    <p>Charging Calculator</p>
+                                </div>
+                                <br>
+                                <div>
+                                    <p class="pa">Charging With NACS</p>
+                                </div>
+                                <br>
+                                <div>
+                                    <p>Supercharging Voting</p>
+                                </div>
+                                <br>
+                                <div>
+                                    <p>Host a Supercharger</p>
+                                </div>
+                                <br>
+                                <div>
+                                    <p class="pa">Commercial Charging</p>
+                                </div>
+                                <br>
+                                <div>
+                                    <p class="pa">Host Wall Connector</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="menu-item atages">
+                    <a href="#" id="Discover">Discover</a>
+                </div>
+                <div class="d_menu" id="dmenu">
+                    <div>
+                        <h2>Resources</h2>
+                        <br>
+                        <p>Demo-drive </p>
+                        <br>
+                        <p>Militery Purchase Program</p>
+                        <br>
+                        <p>vedio Guides</p>
+                        <br>
+                        <p>Customer Stories</p>
+                        <br>
+                        <p>Events</p>
+                        <br>
+                        <p>Find us</p>
+                        <br>
+                        <p>Find a collision Center</p>
+                        <br>
+                        <p>Find a certified Installer</p>
+                        <br>
+                        <p>About</p>
+                        <br>
+                        <p>Careers</p>
+                        <br>
+                        <p>Investor Relations</p>
+                    </div>
+                    <div>
+                        <h2>Location Services</h2>
+                        <br>
+                        <p>About us </p>
+                        <br>
+                        <p>Find a collision Center</p>
+                        <br>
+                        <p>Find a certified Installer</p>
+
+                    </diV>
+                    <div>
+                        <h2>company</h2>
+                        <br>
+                        <p>About </p>
+                        <br>
+                        <p>Careers</p>
+                        <br>
+                        <p>Investor Relations</p>
+
+                    </diV>
+
+
+
+
+
+
+
+
+                </div>
+                <div class="menu-item atages">
+                    <a href="#" id="Shop">Shop</a>
+                    <div class="s_menu">
+                        <div class="sub-menu">
+                            <img class="img" src="img/charging.menu.avif">
+
+
+                            <img class="img" src="img/Vehicle-Accessories.avif">
+
+
+                            <img class="img" src="img/cap.avif">
+
+
+
+                        </div>
+
+                        <div class="sub-para">
+                            <div>
+                                <p><b>Charging</b></p>
+                            </div>
+                            <div>
+                                <p><b>Vehicle Accessories</b></p>
+                            </div>
+                            <div>
+                                <p class="pa"><b>Apperal</b></p>
+                            </div>
+
+                        </div>
+                        <div class="sec2-sub-menu">
+                            <div class="sub-menu">
+                                <img class="img" src="img/bag.avif">
+
+
+
+
+
+                            </div>
+
+                            <div class="sub-btn">
+
+
+
+                            </div>
+                            <div class="sub-para">
+                                <div>
+                                    <p><b>Life-Style</b></p>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+            <div class="icons">
+                <img src="img/icons8-help-50.png " alt="logo" class="icon">
+                <img src="img/icons8-website-24.png" alt="logo" class="icon">
+                <img src="img/loge in logo.jpg " alt="logo" class="icon">
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+    <main>
+        <div class="img-cont cont1">
+            <div class="desc">
+                <h1>Model 3</h1>
+                <h3 class="text">$7,500 Federal Tax Credit Available1 </h3>
+                <h3 class="text">From $29,990 After Est. Savings2</h3>
+
+            </div>
+            <div class="buttons">
+                <buttons class="btn1 atages">Order Now</buttons>
+                <buttons class="btn2 atages">Demo Drive</buttons>
+
+            </div>
+
+        </div>
+        <div class="img-cont cont2">
+            <div class="desc">
+                <h1>Model Y</h1>
+                <h3>From $31,4903</h3>
+                <h3>After $13,500 Est. Savings</h3>
+
+            </div>
+            <div class="buttons">
+                <buttons class="btn1 atages">Order Now</buttons>
+                <buttons class="btn2 atages">Demo Drive</buttons>
+
+            </div>
+
+        </div>
+        <div class="img-cont cont3">
+            <div class="desc">
+                <h1>Model-X</h1>
+                <h3>From $63,9904</h3>
+                <h3>After Est. Savings</h3>
+
+            </div>
+            <div class="buttons">
+                <buttons class="btn1 atages">Order Now</buttons>
+                <buttons class="btn2 atagess">Demo Drive</buttons>
+
+            </div>
+
+        </div>
+        <div class="img-cont cont4">
+            <div class="desc">
+                <h1>Model S</h1>
+                <h3>From $66,4905</h3>
+                <h3>After Est. Savings</h3>
+
+            </div>
+            <div class="buttons">
+                <buttons class="btn1 atages">Order Now</buttons>
+                <buttons class="btn2 atagess">Demo Drive</buttons>
+
+            </div>
+
+        </div>
+        <div class="img-cont cont5">
+
+            <div class="buttons boss">
+                <buttons class="btn1  bos1 atages">Order Now</buttons>
+                <buttons class="btn2 bos2 atages">Learn more</buttons>
+
+            </div>
+
+        </div>
+        <div class="img-cont cont6">
+            <div class="desc">
+                <h1>Solar Panels</h1>
+                <h3 class="text">Schedule a Virtual Consultation</h3>
+
+
+            </div>
+            <div class="buttons">
+                <buttons class="btn1 atages">Order Now</buttons>
+                <buttons class="btn2 atages">Learn more</buttons>
+
+            </div>
+
+        </div>
+        <div class="img-cont cont7">
+            <div class="desc">
+                <h1 class="text">Solar Roof</h1>
+                <h3 class="text">Produce Clean Energy From Your Roof</h3>
+
+
+            </div>
+            <div class="buttons">
+                <buttons class="btn1 atages">Order Now</buttons>
+                <buttons class="btn2 atages">Learn more</buttons>
+
+            </div>
+
+        </div>
+        <div class="img-cont cont8">
+            <div class="desc">
+                <h1>Powerwall</h1>
+
+
+
+            </div>
+            <div class="buttons">
+                <buttons class="btn1 atages">Order Now</buttons>
+                <buttons class="btn2 atages">Learn more</buttons>
+
+            </div>
+
+        </div>
+        <div class="img-cont cont9">
+            <div class="desc">
+                <h1>Accessories</h1>
+
+
+
+            </div>
+            <div class="buttons">
+                <buttons class="btn1 allem atages">Shope Now</buttons>
+
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const vehicle = document.getElementById("vehicle");
+            const dmenu=document.getElementById("dmenu");
+
+            vehicle.addEventListener("click", function () {
+                toggleMenu("v_menu");
+            });
+
+            const energy = document.getElementById("energy");
+            energy.addEventListener("click", function () {
+                toggleMenu("e_menu");
+            });
+
+            const charging = document.getElementById("Charging");
+            charging.addEventListener("click", function () {
+
+                toggleMenu("c_menu");
+            });
+
+            const discover = document.getElementById("Discover");
+            discover.onclick=function(){
+                if(dmenu.style.display=="none")
+            {
+                dmenu.style.display="flex";
+            }
+            else{
+                dmenu.style.display="none";
+            }
+            }
+
+
+            const shop = document.getElementById("Shop");
+            shop.addEventListener("click", function () {
+                toggleMenu("s_menu");
+            });
+
+
+            function toggleMenu(className) {
+                const items = document.getElementsByClassName(className);
+                for (let i = 0; i < items.length; i++) {
+                    const displayStyle = window.getComputedStyle(items[i]).display;
+                    if (displayStyle === "block") {
+                        items[i].style.display = "none";
+                    } else {
+                        items[i].style.display = "block";
+                    }
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
